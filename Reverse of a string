@@ -1,0 +1,9 @@
+string = " This is a Reversed String "
+
+s = string.split()[::-1]
+r = []
+for i in s:
+    
+    r.append(i)
+
+print(" ".join(r))
