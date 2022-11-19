@@ -1,0 +1,17 @@
+test_list = [1937, 5738, 5738, 3048, 7489, 90]
+
+print("The original list is : " + str(test_list))
+
+K = 4
+
+res = []
+
+for ele in test_list:
+
+    str_ele = str(ele)
+
+    new_ele = int(''.join([ str(max(0, int(el) - K)) for el in str_ele]))
+
+    res.append(new_ele)
+
+print("Elements after subtracting K from each digit : " + str(res))
