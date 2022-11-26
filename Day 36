@@ -1,0 +1,19 @@
+test_list = [5, 6, 3, 7, 8, 10, 9]
+
+print("The original list is : " + str(test_list))
+
+range_list = [4, 7, 9, 6]
+
+  
+
+res = True
+
+for ele in range_list:
+
+    if ele  max(test_list):
+
+        res = False
+
+        break
+        
+print("Are all elements in min/max range? : " + str(res))
