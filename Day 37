@@ -1,0 +1,12 @@
+test_list = [["Python", "is", "best"], ["Better", "Best"],
+
+             ["i am good"], ["love", "hate"]]
+
+ 
+print("The original list is : " + str(test_list))
+
+res = list(filter(lambda sub: ''.join(
+
+    [ele for ele in sub]).isalpha(), test_list))
+
+print("Filtered Rows : " + str(res))
