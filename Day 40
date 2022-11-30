@@ -1,0 +1,26 @@
+from itertools import chain
+
+def dup_idx(sub):
+
+	memo = set()
+	for idx, ele in enumerate(sub):
+
+		if ele not in memo:
+			memo.add(ele)
+		else:
+
+			yield idx
+
+test_list = [[4, 3, 5, 2, 3], [6, 4, 2, 1, 1],
+			[4, 3, 9, 3, 9], [5, 4, 3, 2, 1]]
+
+print("The original list is : " + str(test_list))
+
+K = 3
+
+temp_idxs = set(chain.from_iterable(dup_idx(sub) for sub in test_list))
+
+res = [[ele for idx, ele in enumerate(
+	sub) if idx not in temp_idxs] for sub in test_list]
+
+print("The filtered Matrix : " + str(res))
