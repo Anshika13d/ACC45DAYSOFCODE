@@ -1,0 +1,24 @@
+from tkinter import *
+root = Tk()
+
+text = Text(root)
+
+text.insert(INSERT, "Hello, everyone!\n")
+
+text.insert(END, "This is 2020.\n")  
+
+text.insert(END, "Pandemic has resulted 
+
+             in economic slowdown worldwide")
+
+  
+
+text.pack(expand=1, fill=BOTH)
+
+text.tag_add("start", "2.8", "1.13")
+
+text.tag_config("start", background="black",
+
+                 foreground="red")
+
+root.mainloop()
